@@ -1,0 +1,7 @@
+<xml>
+<ToUserName><![CDATA[TUN]]></ToUserName>
+<FromUserName><![CDATA[FUN]]></FromUserName>
+<CreateTime>CT</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[hello]]></Content>
+</xml>

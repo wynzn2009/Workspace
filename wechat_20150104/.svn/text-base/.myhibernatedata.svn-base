@@ -1,0 +1,24 @@
+#MyEclipse Hibernate Properties
+#Tue Sep 16 19:37:44 CST 2014
+sessionFactoryName=
+genBasicCompId=true
+profile=
+daoSFId=sessionFactory
+version=3.3
+jndiPath=
+detectM2M=false
+reStrategyClass=
+detectO2O=false
+springDaoFile=src/applicationContext.xml
+useJavaTypes=true
+keyGenerator=assigned
+libInstallFolder=<no jars/zips in selected libraries>
+addLibs2Project=true
+genVersionTag=true
+sessionFactoryId=sessionFactory
+basePersistenceClass=
+genAnnotations=false
+reSettingsFile=
+configFile=/wechat/src/applicationContext.xml
+createConfigFile=false
+addLibs2Classpath=true

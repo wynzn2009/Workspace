@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台编辑页面</title>	
+<link rel="stylesheet" type="text/css" href="../css/ht_frame.css">
+<link rel="stylesheet" type="text/css" href="../css/wxshow.css">
+<link rel="stylesheet" type="text/css" href="../js/sidebar/css/sidebar.css">
+<script type="text/javascript" src='../js/jquery-1.8.2.min.js'></script>
+<script type="text/javascript" src="../js/sidebar/sidebar.js"></script>
+
+<!--自定义菜单栏-->
+<script type="text/javascript">
+	jQuery(function(){
+		$("#mainsidebar").sideBar();
+		var item = {menuname:"新闻中心", bgurl:"backbt1.png", 
+					submenus:[{url:"javascript:fbxw();",subname:"发布新闻"},{url:"javascript:xwls();",subname:"新闻历史"}]};
+		$("#mainsidebar").appendSideItem(item);
+		var item = {menuname:"公告中心", bgurl:"backbt2.png", 
+					submenus:[{url:"javascript:fbgg()",subname:"发布公告"},{url:"javascript:ggls()",subname:"公告历史"}]};
+		$("#mainsidebar").appendSideItem(item);
+		var item = {menuname:"便民服务", bgurl:"backbt7.png",
+					submenus:[{url:"javascript:dwdh();",subname:"窗口电话"},{url:"javascript:dwjj();",subname:"单位简介"},{url:"javascript:dtdh();",subname:"大厅导航"}]};
+		$("#mainsidebar").appendSideItem(item);
+		var item = {menuname:"用户信息", bgurl:"backbt3.png",
+					submenus:[{url:"javascript:grxx();",subname:"信息修改"},{url:"javascript:grxx();",subname:"其他"}]};
+		$("#mainsidebar").appendSideItem(item);
+		$(".side-menu a").first().trigger('click');
+		fbxw();
+	});
+	
+	function fbxw(){
+		$("#contentIframe").attr("src",'fbxw.jsp');
+	}
+	
+	function xwls(){
+		$("#contentIframe").attr("src",'xwls.jsp');
+	}
+	
+	function fbgg(){
+		$("#contentIframe").attr("src",'fbgg.jsp');
+	}
+	
+	function ggls(){
+		$("#contentIframe").attr("src",'ggls.jsp');
+	}
+	
+	function dwdh(){
+		$("#contentIframe").attr("src",'dwdh.jsp');
+	}
+	
+	function dwjj(){
+		$("#contentIframe").attr("src",'dwjj.jsp');
+	}
+	
+	function grxx(){
+		$("#contentIframe").attr("src",'grxx.jsp');
+	}
+	
+	function dtdh(){
+		$("#contentIframe").attr("src",'dtdh.jsp');
+	}
+</script>
+</head>
+<body>
+<div class="ht-box">
+	<div class="topbanner-box" style="background:url('../images/banner.jpg');"></div>
+	<div class="con-box">
+		<div class="side-box">
+			<div class="sidebar" id="mainsidebar">
+				
+			</div>
+		</div>
+		<div class="content-box">
+			<iframe id="contentIframe" src="" scrolling="no" frameborder="0" marginwidth="0" marginheight="0">
+			</iframe>
+		</div>
+	</div>
+	<div class="footer-box" align="center">技术支持：北京邮电大学 @2014</div>
+</div>
+</body>
+</html>

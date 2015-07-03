@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+<title>唐山政务服务中心微信平台后台管理</title>
+<link rel="stylesheet" type="text/css" href="../css/ht_frame.css">
+<link rel="stylesheet" type="text/css" href="../js/sidebar/css/sidebar.css">
+<script type="text/javascript" src='../js/jquery-1.10.2.min.js'></script>
+<script type="text/javascript" src="../js/sidebar/sidebar.js"></script>
+<script type="text/javascript">
+var what = function(){
+	//item:{menuname:name,bgurl:url,submenus:{{url:url,subname:name},{url:url,subname:name}}}
+	var item = {menuname:"js生成", bgurl:"backbt3.png",
+		 submenus:[{url:"javascript:void(0)",subname:"sub1"},{url:"javascript:void(0)",subname:"sub2"}]};
+	$("#mainsidebar").appendSideItem(item);
+}
+</script>
+</head>
+<body>
+<button onclick="what()">aaaaa</button>
+<div class="ht-box">
+	<div class="topbanner-box"></div>
+	<div class="con-box">
+		<div class="side-box">
+			<div class="sidebar" id="mainsidebar"></div>
+			<!--自定义菜单栏-->
+			<script type="text/javascript">
+				jQuery(function(){
+					$("#mainsidebar").sideBar();
+					var item = {menuname:"新闻中心", bgurl:"backbt1.png", 
+								submenus:[{url:"javascript:void(0)",subname:"发布新闻"},{url:"javascript:void(0)",subname:"新闻历史"}]};
+					$("#mainsidebar").appendSideItem(item);
+					var item = {menuname:"公告中心", bgurl:"backbt2.png", 
+								submenus:[{url:"javascript:void(0)",subname:"发布公告"},{url:"javascript:void(0)",subname:"公告历史"}]};
+					$("#mainsidebar").appendSideItem(item);
+				});
+			</script>
+		</div>
+		<div class="content-box">afdadfa
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+	<div class="footer-box"></div>
+</div>
+</body>
+</html>
+
+
+<body>
+	<div class="ht-box">
+		<div class="topbanner-box">头部</div>
+		<div class="con-box">
+			<div class="side-box">侧边栏</div>
+			<div class="content-box"><div class="content-block">内容区</div></div>
+			<div style="clear:both;"></div>
+		</div>
+		<div class="footer-box">底部</div>
+	</div>
+</body>

@@ -1,0 +1,63 @@
+@CHARSET "UTF-8";
+body{
+	height: 100%;
+	margin: 0;
+	background-color: #DCDCDC;
+	max-width: 720px;
+	max-height: 960px;
+}
+
+.container{
+	width: 100%;
+}
+
+.input{
+	font: 18px "黑体";
+	width: 100%;
+}
+
+.table.img{
+	width: 30px;
+}
+
+h1{
+	font-size: 2em;
+	font-weight: normal;
+	text-align: center;
+	background-color: #62af01;
+	color: #FFF;
+	margin: 0,3%,0,3%;
+	padding: 5px 0 5px 0;
+}
+
+footer{
+	width: 100%;
+	max-width: 720px;
+	font: normal 1em "微软雅黑";
+	text-align: center;
+	color: #FFF;
+	background-color: #62af01;	
+	clear: both;	
+	position: fixed;
+	bottom: 0;
+}
+
+input[type="text"],input[type="password"],textarea{
+	border: 0 none;
+	width: 98%;
+	padding: 8px 0 8px 0px;
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-border-radius: 0;
+	-webkit-appearance: none;
+}
+
+input[type="submit"],input[type="button"]{
+	margin: 0 0 0 11%;
+	width: 80%;
+	font-size: 25px;
+	background-color: #62af01;
+	border: #559801;
+	color: #fff;
+	border-radius: 4px;
+}

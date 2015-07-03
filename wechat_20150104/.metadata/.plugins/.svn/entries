@@ -1,0 +1,61 @@
+10
+
+dir
+4087
+http://10.103.15.201:81/svn/project_tangshan/branches/wechat_20150104/.metadata/.plugins
+http://10.103.15.201:81/svn/project_tangshan
+
+
+
+2014-07-17T09:07:30.953125Z
+2610
+lqj
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+d9971e25-e5d9-6d4d-8e88-fed5a91e7bc9
+
+org.eclipse.team.cvs.core
+dir
+
+org.eclipse.jdt.core
+dir
+
+org.eclipse.jdt.launching
+dir
+
+org.eclipse.core.runtime
+dir
+
+org.eclipse.m2e.logback.configuration
+dir
+
+org.eclipse.team.cvs.ui
+dir
+
+org.eclipse.jdt.ui
+dir
+
+org.eclipse.ui.workbench
+dir
+
+com.genuitec.org.hibernate.eclipse
+dir
+
+org.eclipse.core.resources
+dir
+
+org.eclipse.dltk.core
+dir
+

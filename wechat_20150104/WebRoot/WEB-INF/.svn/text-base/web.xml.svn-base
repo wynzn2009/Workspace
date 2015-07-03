@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+  <context-param>      
+     <param-name>contextConfigLocation</param-name>   
+     <param-value>classpath*:applicationContext.xml</param-value>   
+  </context-param>    
+    
+  <servlet>
+    <servlet-name>SpringContextServlet </servlet-name>
+    <servlet-class>org.springframework.web.context.ContextLoaderServlet</servlet-class>
+    <load-on-startup>1 </load-on-startup>
+  </servlet>
+
+  <servlet>
+    <description>for check login</description>
+    <description>for valid the message from wx</description>
+    <display-name>loginSer</display-name>
+    <servlet-name>Validwx</servlet-name>
+    <servlet-class>Servlet.Validwx</servlet-class>
+  </servlet>
+  <servlet>
+    <description>for bj search</description>
+    <display-name>bjSearch</display-name>
+    <servlet-name>bjSearch</servlet-name>
+    <servlet-class>Servlet.bjSearch</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<description>for tsxx</description>
+  	<display-name>fot tsxx</display-name>
+  	<servlet-name>Xjts</servlet-name>
+  	<servlet-class>Servlet.Xjts</servlet-class>
+  </servlet>
+  
+  
+  
+  
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>tsfkSearch</servlet-name>
+    <servlet-class>Servlet.tsfkSearch</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>test</servlet-name>
+    <servlet-class>Servlet.test</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Dw</servlet-name>
+    <servlet-class>Servlet.Dw</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>loginServlet</servlet-name>
+    <servlet-class>Servlet.loginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>for news save</description>
+    <display-name>newssave</display-name>
+    <servlet-name>NewsSave</servlet-name>
+    <servlet-class>Servlet.NewsSave</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>grxx</servlet-name>
+  	<servlet-class>Servlet.userInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <description>for gonggao save</description>
+    <display-name>gonggaosave</display-name>
+    <servlet-name>GonggaoSave</servlet-name>
+    <servlet-class>Servlet.GonggaoSave</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>sxSearch</servlet-name>
+    <servlet-class>Servlet.sxSearch</servlet-class>
+  </servlet>
+
+
+
+
+
+	
+  <servlet-mapping>
+  	<servlet-name>grxx</servlet-name>
+  	<url-pattern>/servlet/userInfo</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+  	<servlet-name>Xjts</servlet-name>
+  	<url-pattern>/servlet/Xjts</url-pattern>	
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>Validwx</servlet-name>
+    <url-pattern>/servlet/Validwx</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>bjSearch</servlet-name>
+    <url-pattern>/servlet/bjSearch</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>tsfkSearch</servlet-name>
+    <url-pattern>/servlet/tsfkSearch</url-pattern>
+  </servlet-mapping>
+   
+  
+  <servlet-mapping>
+    <servlet-name>test</servlet-name>
+    <url-pattern>/servlet/test</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Dw</servlet-name>
+    <url-pattern>/servlet/Dw</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>loginServlet</servlet-name>
+    <url-pattern>/servlet/loginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>NewsSave</servlet-name>
+    <url-pattern>/servlet/NewsSave</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GonggaoSave</servlet-name>
+    <url-pattern>/servlet/GonggaoSave</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>sxSearch</servlet-name>
+    <url-pattern>/servlet/sxSearch</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <filter>
+    <filter-name>FromSourceFilter</filter-name>
+    <filter-class>Filter.FromSourceFilter</filter-class>
+    <!-- 配置当前 Filter 的初始化参数 -->      
+		<init-param>               
+		<param-name>redirectPath</param-name>              
+		<param-value>/yw/bmsx.jsp</param-value>       
+		</init-param>  
+  </filter>  
+  
+  <filter>
+  	<filter-name>LoginFilter</filter-name>
+  	<filter-class>Filter.LoginFilter</filter-class> 	
+  </filter>
+<!--  <filter-mapping>-->
+<!--  	<filter-name>LoginFilter</filter-name>-->
+<!--  	<url-pattern>/htgl/*</url-pattern>-->
+<!--  </filter-mapping>    -->
+	
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/error.jsp</location>
+  </error-page>
+  
+</web-app>

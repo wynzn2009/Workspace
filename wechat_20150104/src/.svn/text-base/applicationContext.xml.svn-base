@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName"
+			value="net.sourceforge.jtds.jdbc.Driver">
+		</property>
+		<property name="url"
+			value="jdbc:jtds:sqlserver://127.0.0.1:1433/hframe">
+		</property>
+		<property name="username" value="sa"></property>
+		<property name="password" value="root.1234"></property>
+	</bean>
+	
+	
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.SQLServerDialect
+				</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/wechat/vo/Testwechat.hbm.xml</value>
+				<value>com/wechat/vo/SxJbxx.hbm.xml</value>
+				<value>com/wechat/vo/BjJbxx.hbm.xml</value>
+				<value>com/wechat/vo/BjLcclxx.hbm.xml</value>
+				<value>com/wechat/vo/Tsxx.hbm.xml</value>
+				<value>com/wechat/vo/Tsxxfk.hbm.xml</value>
+				<value>com/wechat/vo/SxYjxx.hbm.xml</value>
+				<value>com/wechat/vo/Dw.hbm.xml</value>
+				<value>com/wechat/vo/Userinfo.hbm.xml</value>
+				<value>com/wechat/vo/Newssave.hbm.xml</value>
+				<value>com/wechat/vo/WxGonggao.hbm.xml</value>
+				<value>com/wechat/vo/SysYhzcxx.hbm.xml</value></list>
+		</property>
+	</bean>
+	
+	<!-- <bean id="TestwechatDAO" class="com.wechat.dao.TestwechatDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean> -->
+	
+	<bean id="BjJbxxDAO" class="com.wechat.dao.BjJbxxDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="BjLcclxxDAO" class="com.wechat.dao.BjLcclxxDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="BjService" class="com.wechat.service.BjService">
+		<property name="bjjbxxdao" ref="BjJbxxDAO"></property>
+		<property name="bjlcclxxdao" ref="BjLcclxxDAO"></property>
+	</bean>
+	
+	<bean id="TsxxDAO" class="com.wechat.dao.TsxxDAO">
+	    <property name="sessionFactory"> 
+			<ref bean="sessionFactory"/>
+		</property>
+		<property name="dataSource">
+		<ref bean="dataSource"/>
+		</property>
+    </bean>
+	<bean id="TsxxService" class="com.wechat.service.TsxxService">
+		<property name="dao" ref="TsxxDAO"></property>
+	</bean>
+	
+	<bean id="SxJbxxDAO" class="com.wechat.dao.SxJbxxDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="SxJbxxService" class = "com.wechat.service.SxJbxxService">
+		<property name = "dao" ref = "SxJbxxDAO"></property>
+	</bean>
+	
+	<bean id="SxYjxxDAO" class="com.wechat.dao.SxYjxxDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="SxYjxxService" class = "com.wechat.service.SxYjxxService">
+		<property name = "dao" ref = "SxYjxxDAO"></property>
+	</bean>
+	
+	<bean id="TsxxfkDAO" class="com.wechat.dao.TsxxfkDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="TsxxfkService" class="com.wechat.service.TsxxfkService">
+		<property name="dao" ref="TsxxfkDAO"></property>
+	</bean>
+	<bean id="DwDAO" class="com.wechat.dao.DwDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="DwService" class="com.wechat.service.DwService">
+		<property name="dao" ref="DwDAO"></property>
+	</bean>
+	<bean id="UserinfoDAO" class="com.wechat.dao.UserinfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="userInfoService" class="com.wechat.service.userInfoService">
+		<property name="dao" ref="UserinfoDAO"></property>
+	</bean>
+	<bean id="NewssaveDAO" class="com.wechat.dao.NewssaveDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="NewsSaveService" class="com.wechat.service.NewsSaveService">
+		<property name="dao" ref="NewssaveDAO"></property>
+	</bean>
+	<bean id="WxGonggaoDAO" class="com.wechat.dao.WxGonggaoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="WxGonggaoService" class="com.wechat.service.WxGonggaoService">
+		<property name="dao" ref="WxGonggaoDAO"></property>
+	</bean>
+	<bean id="SysYhzcxxDAO" class="com.wechat.dao.SysYhzcxxDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean></beans>

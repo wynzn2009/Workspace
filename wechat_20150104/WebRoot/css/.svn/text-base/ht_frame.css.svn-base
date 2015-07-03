@@ -1,0 +1,207 @@
+/*总框架,构建整体布局*/
+/*class样式的命名规则中的连接线请用‘-’*/
+/*id的命名规则中的连接线请用‘_’，样式中有‘_’连接的类名一般是用于唯一标识的*/
+body{
+	margin: 0;
+	font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","微软雅黑","黑体",Arial,sans-serif;
+	color: #222;
+	font-size: 14px;
+	background-color: #909090
+}
+
+.ht-box{
+	width: 1190px;
+	margin:0 auto;
+	position: relative;
+	border: 1px solid grey;
+}
+
+.topbanner-box{
+	height: 80px;
+	background-color: #dddddd;
+}
+
+.con-box{
+	height: 650px;
+	background-color: #efefef;
+}
+
+.side-box{
+	width: 190px;
+	height: 100%;
+	background-color: #d2d2d2;
+	display: block;
+	float: left;
+}
+
+.content-box{
+	width: 1000px;
+	height: 100%;
+	background-color: #909090;
+	display: block;
+	float: left;
+}
+
+.footer-box{
+	color: #ECF5FF;
+	background-color: #004B97;
+	text-align: center;
+	font-size: 16px;
+	height: 30px;
+}
+
+iframe{
+	width: 100%;
+	height: 100%;
+	float: left;
+}
+
+form{
+	margin-bottom: 0.3em;
+}
+/*内容区框架*/
+.content-block{
+	margin: 0 auto;
+	width: 1000px;/*这相当于<frame>标签，宽度限定在1000px内，所有独立编写的功能页面如“新闻发布”，“历史新闻”都需要在外网包裹<div class='content-frame'>*/
+	height: 100%;
+	background-color: #efefef;
+}
+
+.content-block h3{
+	margin: 0;
+	padding: 10px 5px;
+	background-color: #e0e0e0;
+}
+
+.content-block .block-inner{
+	margin: 2% 3%;
+	border: 1px solid grey;
+	border-radius: 5px;
+	height: 85%;
+}
+
+.content-block .block-editor{
+	float: left;
+	width: 54%;
+	height: 100%;
+	margin: 0;
+	border:0 none;
+}
+
+.content-block .block-preview{
+	float: left;
+	width: 46%;
+	height: 100%;
+}
+
+/*编辑区域，如标题input，封面upload等 ptm:Pic-Text-Material or Message*/
+.content-block .inner{
+	padding: 10px;
+	border-right: 1px solid #cfcfcf;
+	min-height: 500px;
+	height: 100%;
+}
+
+.content-block .ptm-edit-item{
+	padding-bottom: 0.4em;
+}
+
+.content-block .ptm-label{
+	display: block;
+	width: auto;
+	margin: 4px 0;
+	font-size: 16px;
+}
+
+.content-block .ptm-inputbox{
+	display: block;
+	width: auto;
+	height: auto;
+	min-height: 30px;
+	border: 1px solid #cfcfcf;
+	line-height: 30px;
+	vertical-align: middle;
+	font-size: 14px;
+	padding: 0 10px;
+	background-color: #fff;
+}
+
+.content-block .ptm-input{
+	font-family: inherit;
+	height: 22px;
+	margin: 4px 0;
+	width: 100%;
+	background-color: transparent;
+	border: 0;
+	outline: 0;
+}
+
+.content-block .ptm-ueditor{
+	width: 100%;
+}
+
+.content-block .tips{
+	color: #8d8d8d;
+}
+
+.content-block .toolarea{
+	clear: both;
+	margin: 0;
+	padding: 10px 0;
+	text-align: center;
+}
+
+.content-block .toolarea .btn{
+	margin: 0 0.5em;
+	min-width: 104px;
+	width: 104px;
+	padding: 0;
+	display: inline-block;
+	overflow: visible;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	font-size: 14px;
+	border-width: 1px;
+	border-style: solid;
+}
+
+.content-block .toolarea .btn-default{
+	background-color: #a3a3a3;
+	border-color: #a3a3a3;	
+}
+
+.content-block .toolarea .btn-default:hover{
+	background-color: #8e8e8e;
+	border-color: #8e8e8e;
+}
+
+.content-block .toolarea .btn-primary{
+	background-color: #44b549;
+	border-color: #44b549;
+}
+
+.content-block .toolarea .btn-primary:hover{
+	background-color: #2f9833;
+	border-color: #2f9833;
+}
+
+.content-block .toolarea button{
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	background-color: transparent;
+	border: 0;
+	outline: 0;
+	overflow: visible;
+	padding: 0 22px;
+	cursor: pointer;
+	-webkit-appearance: button;
+	font-family: inherit;
+}

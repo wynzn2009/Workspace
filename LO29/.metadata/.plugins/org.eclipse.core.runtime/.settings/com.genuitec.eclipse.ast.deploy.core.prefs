@@ -1,0 +1,13 @@
+#Thu May 14 19:44:23 CST 2015
+tomcat6Server.qaze.isExploded=true
+tomcat6Server.qaze.contextRoot=/qaze
+tomcat6Server.qaze.shouldBackup=false
+tomcat6Server.qaze.deployIsOverProject=false
+tomcat6Server.qaze.isUptoDate=true
+tomcat6Server.qaze.altContextRoot=
+tomcat6Server.qaze.isDeployed=true
+eclipse.preferences.version=1
+tomcat6Server.qaze.shouldOverwrite=false
+tomcat6Server.qaze.deploymentPath=D\:\\tomcat-6.0\\webapps\\qaze
+tomcat6Server.qaze.type=WebDeployment
+tomcat6Server.qaze.IEARProjectName=

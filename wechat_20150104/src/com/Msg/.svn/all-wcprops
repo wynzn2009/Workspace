@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/project_tangshan/!svn/ver/4086/branches/wechat_20150104/src/com/Msg
+END
+MsgXmlFormat.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/project_tangshan/!svn/ver/4086/branches/wechat_20150104/src/com/Msg/MsgXmlFormat.java
+END
+BaseMsg.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/project_tangshan/!svn/ver/4086/branches/wechat_20150104/src/com/Msg/BaseMsg.java
+END
+TaskSimpleText.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/project_tangshan/!svn/ver/4086/branches/wechat_20150104/src/com/Msg/TaskSimpleText.java
+END
+MsgSimpleText.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/project_tangshan/!svn/ver/4086/branches/wechat_20150104/src/com/Msg/MsgSimpleText.java
+END
+ButtonTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/project_tangshan/!svn/ver/4086/branches/wechat_20150104/src/com/Msg/ButtonTest.java
+END
+PublicNetAddress.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/project_tangshan/!svn/ver/4086/branches/wechat_20150104/src/com/Msg/PublicNetAddress.java
+END
+MsgSimpleButton.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/project_tangshan/!svn/ver/4086/branches/wechat_20150104/src/com/Msg/MsgSimpleButton.java
+END
+BaseTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/project_tangshan/!svn/ver/4086/branches/wechat_20150104/src/com/Msg/BaseTask.java
+END

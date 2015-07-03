@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/project_tangshan/!svn/ver/4086/branches/wechat_20150104/src/com/wechat/dao
+END
+NewssaveDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/project_tangshan/!svn/ver/4086/branches/wechat_20150104/src/com/wechat/dao/NewssaveDAO.java
+END
+SysYhzcxxDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/project_tangshan/!svn/ver/4092/branches/wechat_20150104/src/com/wechat/dao/SysYhzcxxDAO.java
+END
+SxYjxxDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/project_tangshan/!svn/ver/4086/branches/wechat_20150104/src/com/wechat/dao/SxYjxxDAO.java
+END
+WxGonggaoDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/project_tangshan/!svn/ver/4086/branches/wechat_20150104/src/com/wechat/dao/WxGonggaoDAO.java
+END
+DutyUserDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/project_tangshan/!svn/ver/4086/branches/wechat_20150104/src/com/wechat/dao/DutyUserDAO.java
+END
+DutyDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/project_tangshan/!svn/ver/4086/branches/wechat_20150104/src/com/wechat/dao/DutyDAO.java
+END
+SxJbxxDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/project_tangshan/!svn/ver/4086/branches/wechat_20150104/src/com/wechat/dao/SxJbxxDAO.java
+END
+TsxxDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/project_tangshan/!svn/ver/4086/branches/wechat_20150104/src/com/wechat/dao/TsxxDAO.java
+END
+BjJbxxDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/project_tangshan/!svn/ver/4086/branches/wechat_20150104/src/com/wechat/dao/BjJbxxDAO.java
+END
+TsxxfkDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/project_tangshan/!svn/ver/4086/branches/wechat_20150104/src/com/wechat/dao/TsxxfkDAO.java
+END
+BjLcclxxDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/project_tangshan/!svn/ver/4086/branches/wechat_20150104/src/com/wechat/dao/BjLcclxxDAO.java
+END
+BaseDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/project_tangshan/!svn/ver/4086/branches/wechat_20150104/src/com/wechat/dao/BaseDAO.java
+END
+DwDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/project_tangshan/!svn/ver/4086/branches/wechat_20150104/src/com/wechat/dao/DwDAO.java
+END
+UserinfoDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/project_tangshan/!svn/ver/4086/branches/wechat_20150104/src/com/wechat/dao/UserinfoDAO.java
+END

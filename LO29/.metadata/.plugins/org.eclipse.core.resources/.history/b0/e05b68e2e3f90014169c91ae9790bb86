@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:dwr="http://www.directwebremoting.org/schema/spring-dwr" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd 
+	http://www.directwebremoting.org/schema/spring-dwr http://www.directwebremoting.org/schema/spring-dwr/spring-dwr-2.0.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+	<!-- spring annotation声明 -->
+	<context:annotation-config></context:annotation-config>
+	<context:component-scan base-package="com"></context:component-scan>
+
+	<!-- 声明AOP -->
+	<aop:aspectj-autoproxy proxy-target-class="true"></aop:aspectj-autoproxy>
+
+	<!-- 声明可读取配置文件，在本XML中就可用${}取到xxx.properties文件的值 -->
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="classpath:datasource.properties"></property>
+	</bean>
+
+	<!-- 配置连接池数据源参数从datasource.properties中读取解析 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close" dependency-check="none">
+		<property name="username" value="${connection.username}"></property>
+	  <property name="password" value="${connection.password}"></property>
+	  <property name="url" value="${connection.url}"></property>
+	  <property name="driverClassName" value="${connection.driverClassName}"></property>
+	  <!-- <property name="initialSize" value="${connection.initialSize}"></property> -->
+	  <property name="maxActive" value="${connection.maxActive}"></property>
+	  <property name="maxIdle" value="${connection.maxIdle}"></property>
+	  <property name="minIdle" value="${connection.minIdle}"></property>
+	  <property name="maxWait" value="${connection.maxWait}"></property>
+	  <property name="removeAbandoned" value="${connection.removeAbandoned}"></property>
+	  <property name="removeAbandonedTimeout" value="${connection.removeAbandonedTimeout}"></property>
+	  <property name="logAbandoned" value="${connection.logAbandoned}"></property>
+	</bean>
+
+	<!-- 已注解的形式定义 SessionFactory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource"></ref>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					${hibernate.dialect}
+				</prop>
+				<prop key="hibernate.show_sql">
+					${hibernate.show_sql}
+				</prop>
+				<prop key="hibernate.format_sql">
+					${hibernate.format_sql}
+				</prop>
+				<prop key="hibernate.jdbc.fetch_size">
+					${hibernate.jdbc.fetch_size}
+				</prop>
+				<prop key="hibernate.jdbc.batch_size">
+					${hibernate.jdbc.batch_size}
+				</prop>
+				<prop key="hibernate.hbm2ddl.auto">
+					${hibernate.hbm2ddl.auto}
+				</prop>
+				<prop key="hibernate.cglib.use_reflection_optimizer">
+					false
+				</prop>
+				<prop key="hibernate.connection.release_mode">
+					${hibernate.connection.release_mode}
+				</prop>
+			</props>
+		</property>
+		<!-- 扫描当前包下的所有实体 -->
+		<property name="packagesToScan">
+			<list>
+				<value>com.pojo</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- 注入hibernateTemplate -->
+	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<!-- 事务管理器 -->
+	<bean id="txManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+
+	<!--使用基于注解方式配置事务 -->
+	<tx:annotation-driven transaction-manager="txManager" />
+</beans>
